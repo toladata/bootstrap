@@ -27,7 +27,7 @@
   .btn + .btn-group,
   .btn-group + .btn,
   .btn-group + .btn-group {
-    margin-left: -1px;
+    margin-left: -2px;
   }
 }
 
@@ -59,7 +59,7 @@
     .border-right-radius(0);
   }
 }
-// Need .dropdown-toggle since :last-child doesn't apply, given that a .dropdown-menu is used immediately after it
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   .border-left-radius(0);
@@ -163,7 +163,7 @@
   > .btn + .btn-group,
   > .btn-group + .btn,
   > .btn-group + .btn-group {
-    margin-top: -1px;
+    margin-top: -@label-font-weight;
     margin-left: 0;
   }
 }

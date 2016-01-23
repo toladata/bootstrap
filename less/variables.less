@@ -7,19 +7,25 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #000;
+@gray-base:              rgb(10, 10, 10);
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:         rgb(179, 8, 56);
 @brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
-@brand-warning:         #f0ad4e;
+@brand-info:            rgb(77, 178, 209);
+@brand-warning:         rgb(232, 148, 36);
 @brand-danger:          #d9534f;
 
+
+//== Borders + Rules
+//
+//## Default border widths for most elements
+
+@border-width:          2px;
 
 //== Scaffolding
 //
@@ -42,7 +48,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "scandia-web", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -96,22 +102,22 @@
 @padding-small-vertical:    5px;
 @padding-small-horizontal:  10px;
 
-@padding-xs-vertical:       1px;
-@padding-xs-horizontal:     5px;
+@padding-xs-vertical:       2px;
+@padding-xs-horizontal:     7px;
 
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
 //** Global background color for active items (e.g., navs or dropdowns).
 @component-active-bg:       @brand-primary;
 
-//** Width of the `border` for generating carets that indicate dropdowns.
+//** Width of the `border` for generating carets that indicator dropdowns.
 @caret-width-base:          4px;
 //** Carets increase slightly in size for larger components.
 @caret-width-large:         5px;
@@ -206,11 +212,11 @@
 @input-color-placeholder:        #999;
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + @border-width * 2);
 //** Large `.form-control` height
-@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + @border-width * 2);
 //** Small `.form-control` height
-@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + @border-width * 2);
 
 //** `.form-group` margin
 @form-group-margin-bottom:       15px;
@@ -234,7 +240,7 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-border:                #ccc;
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
@@ -470,7 +476,7 @@
 
 @pager-bg:                             @pagination-bg;
 @pager-border:                         @pagination-border;
-@pager-border-radius:                  15px;
+@pager-border-radius:                  20px;
 
 @pager-hover-bg:                       @pagination-hover-bg;
 
@@ -581,6 +587,9 @@
 @label-color:                 #fff;
 //** Default text color of a linked label
 @label-link-hover-color:      #fff;
+
+//** Label font weight
+@label-font-weight:           normal;
 
 
 //== Modals

@@ -147,7 +147,7 @@ mark,
 .page-header {
   padding-bottom: ((@line-height-computed / 2) - 1);
   margin: (@line-height-computed * 2) 0 @line-height-computed;
-  border-bottom: 1px solid @page-header-border-color;
+  border-bottom: @border-width solid @page-header-border-color;
 }
 
 
@@ -234,7 +234,7 @@ abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted @abbr-border-color;
+  border-bottom: @border-width dotted @abbr-border-color;
 }
 .initialism {
   font-size: 90%;

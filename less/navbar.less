@@ -12,7 +12,7 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  border: @border-width solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -51,8 +51,8 @@
   overflow-x: visible;
   padding-right: @navbar-padding-horizontal;
   padding-left:  @navbar-padding-horizontal;
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+  border-top: @border-width solid transparent;
+  box-shadow: inset 0 @border-width 0 rgba(255,255,255,.1);
   &:extend(.clearfix all);
   -webkit-overflow-scrolling: touch;
 
@@ -127,7 +127,7 @@
 // Static top (unfixed, but 100% wide) navbar
 .navbar-static-top {
   z-index: @zindex-navbar;
-  border-width: 0 0 1px;
+  border-width: 0 0 @border-width;
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: 0;
@@ -149,12 +149,12 @@
 }
 .navbar-fixed-top {
   top: 0;
-  border-width: 0 0 1px;
+  border-width: 0 0 @border-width;
 }
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0; // override .navbar defaults
-  border-width: 1px 0 0;
+  border-width: @border-width 0 0;
 }
 
 
@@ -198,7 +198,7 @@
   .navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
+  border: @border-width solid transparent;
   border-radius: @border-radius-base;
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
@@ -287,9 +287,9 @@
   margin-left: -@navbar-padding-horizontal;
   margin-right: -@navbar-padding-horizontal;
   padding: 10px @navbar-padding-horizontal;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  @shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+  border-top: @border-width solid transparent;
+  border-bottom: @border-width solid transparent;
+  @shadow: inset 0 @border-width 0 rgba(255,255,255,.1), 0 @border-width 0 rgba(255,255,255,.1);
   .box-shadow(@shadow);
 
   // Mixin behavior for optimum display

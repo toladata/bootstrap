@@ -18,8 +18,8 @@
 
   background-color: @popover-bg;
   background-clip: padding-box;
-  border: 1px solid @popover-fallback-border-color;
-  border: 1px solid @popover-border-color;
+  border: @border-width solid @popover-fallback-border-color;
+  border: @border-width solid @popover-border-color;
   border-radius: @border-radius-large;
   .box-shadow(0 5px 10px rgba(0,0,0,.2));
 
@@ -35,7 +35,7 @@
   padding: 8px 14px;
   font-size: @font-size-base;
   background-color: @popover-title-bg;
-  border-bottom: 1px solid darken(@popover-title-bg, 5%);
+  border-bottom: @border-width solid darken(@popover-title-bg, 5%);
   border-radius: (@border-radius-large - 1) (@border-radius-large - 1) 0 0;
 }
 
