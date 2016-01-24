@@ -2,23 +2,27 @@
 // Variables
 // --------------------------------------------------
 
+//== Tola
+@color-tola:             rgb(232, 148, 36); // TolaActivity Orange
+// @color-tola:             rgb(77, 178, 209); // TolaTables Blue
+
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              rgb(10, 10, 10);
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@gray-base:              rgb(20, 20, 20);
+@gray-darker:            lighten(@gray-base, 13.5%);
+@gray-dark:              lighten(@gray-base, 20%);
+@gray:                   lighten(@gray-base, 33.5%);
+@gray-light:             lighten(@gray-base, 46.7%);
+@gray-lighter:           lighten(@gray-base, 83%);
 
-@brand-primary:         rgb(179, 8, 56);
+@brand-primary:         @color-tola;
 @brand-success:         #5cb85c;
-@brand-info:            rgb(77, 178, 209);
-@brand-warning:         rgb(232, 148, 36);
-@brand-danger:          #d9534f;
+@brand-info:            rgb(0, 131, 192);
+@brand-warning:         rgb(255, 180, 23);
+@brand-danger:          rgb(179, 8, 56);
 
 
 //== Borders + Rules
@@ -57,6 +61,7 @@
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-xsmall:        ceil((@font-size-base * 0.7)); // ~10px
 
 @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
 @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
@@ -102,8 +107,8 @@
 @padding-small-vertical:    5px;
 @padding-small-horizontal:  10px;
 
-@padding-xs-vertical:       2px;
-@padding-xs-horizontal:     7px;
+@padding-xs-vertical:       1px;
+@padding-xs-horizontal:     5px;
 
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
@@ -206,7 +211,7 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             @brand-primary;
 
 //** Placeholder text color
 @input-color-placeholder:        #999;
